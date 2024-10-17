@@ -1,12 +1,14 @@
 # [jQuery](https://jquery.com/) — New Wave JavaScript
 
-Meetings are currently held on the [matrix.org platform](https://matrix.to/#/#jquery_meeting:gitter.im).
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
 
-Meeting minutes can be found at [meetings.jquery.org](https://meetings.jquery.org/category/core/).
+📅 Meetings are currently held on the [matrix.org platform](https://matrix.to/#/#jquery_meeting:gitter.im).
 
-The latest version of jQuery is available at [https://jquery.com/download/](https://jquery.com/download/).
+📝 Meeting minutes can be found at [meetings.jquery.org](https://meetings.jquery.org/category/core/).
 
-## Version support
+📥 The latest version of jQuery is available at [https://jquery.com/download/](https://jquery.com/download/).
+
+## 🔢 Version Support
 
 | Version | Branch     | Status   |
 | ------- | ---------- | -------- |
@@ -21,7 +23,7 @@ Commercial support for inactive versions is available from [HeroDevs](https://he
 
 Learn more about our [version support](https://jquery.com/support/).
 
-## Contribution Guides
+## 🤝 Contribution Guides
 
 In the spirit of open source software development, jQuery always encourages community code contribution. To help you get started and before you jump into writing code, be sure to read these important contribution guidelines thoroughly:
 
@@ -29,30 +31,28 @@ In the spirit of open source software development, jQuery always encourages comm
 2. [Core Style Guide](https://contribute.jquery.org/style-guide/js/)
 3. [Writing Code for jQuery Projects](https://contribute.jquery.org/code/)
 
-### References to issues/PRs
+### 🔗 References to Issues/PRs
 
 GitHub issues/PRs are usually referenced via `gh-NUMBER`, where `NUMBER` is the numerical ID of the issue/PR. You can find such an issue/PR under `https://github.com/jquery/jquery/issues/NUMBER`.
 
-jQuery has used a different bug tracker - based on Trac - in the past, available under [bugs.jquery.com](https://bugs.jquery.com/). It is being kept in read only mode so that referring to past discussions is possible. When jQuery source references one of those issues, it uses the pattern `trac-NUMBER`, where `NUMBER` is the numerical ID of the issue. You can find such an issue under `https://bugs.jquery.com/ticket/NUMBER`.
+jQuery has used a different bug tracker - based on Trac - in the past, available under [bugs.jquery.com](https://bugs.jquery.com/). It is being kept in read-only mode so that referring to past discussions is possible. When jQuery source references one of those issues, it uses the pattern `trac-NUMBER`, where `NUMBER` is the numerical ID of the issue. You can find such an issue under `https://bugs.jquery.com/ticket/NUMBER`.
 
-## Environments in which to use jQuery
+## 🌐 Environments in Which to Use jQuery
 
 - [Browser support](https://jquery.com/browser-support/)
 - jQuery also supports Node, browser extensions, and other non-browser environments.
 
-## What you need to build your own jQuery
+## 🛠️ What You Need to Build Your Own jQuery
 
 To build jQuery, you need to have the latest Node.js/npm and git 1.7 or later. Earlier versions might work, but are not supported.
 
 For Windows, you have to download and install [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/download/).
 
-macOS users should install [Homebrew](https://brew.sh/). Once Homebrew is installed, run `brew install git` to install git,
-and `brew install node` to install Node.js.
+macOS users should install [Homebrew](https://brew.sh/). Once Homebrew is installed, run `brew install git` to install git, and `brew install node` to install Node.js.
 
-Linux/BSD users should use their appropriate package managers to install git and Node.js, or build from source
-if you swing that way. Easy-peasy.
+Linux/BSD users should use their appropriate package managers to install git and Node.js, or build from source if you swing that way. Easy-peasy.
 
-## How to build your own jQuery
+## 🏗️ How to Build Your Own jQuery
 
 First, [clone the jQuery git repo](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
@@ -66,7 +66,7 @@ npm run build
 
 The built version of jQuery will be placed in the `dist/` directory, along with a minified copy and associated map file.
 
-## Build all jQuery release files
+## 📦 Build All jQuery Release Files
 
 To build all variants of jQuery, run the following command:
 
@@ -74,17 +74,17 @@ To build all variants of jQuery, run the following command:
 npm run build:all
 ```
 
-This will create all of the variants that jQuery includes in a release, including `jquery.js`, `jquery.slim.js`, `jquery.module.js`, and `jquery.slim.module.js` along their associated minified files and sourcemaps.
+This will create all of the variants that jQuery includes in a release, including `jquery.js`, `jquery.slim.js`, `jquery.module.js`, and `jquery.slim.module.js` along with their associated minified files and sourcemaps.
 
-`jquery.module.js` and `jquery.slim.module.js` are [ECMAScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) that export `jQuery` and `$` as named exports are placed in the `dist-module/` directory rather than the `dist/` directory.
+`jquery.module.js` and `jquery.slim.module.js` are [ECMAScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) that export `jQuery` and `$` as named exports and are placed in the `dist-module/` directory rather than the `dist/` directory.
 
-## Building a Custom jQuery
+## 🧩 Building a Custom jQuery
 
 The build script can be used to create a custom version of jQuery that includes only the modules you need.
 
 Any module may be excluded except for `core`. When excluding `selector`, it is not removed but replaced with a small wrapper around native `querySelectorAll` (see below for more information).
 
-### Build Script Help
+### 🛠️ Build Script Help
 
 To see the full list of available options for the build script, run the following:
 
@@ -92,7 +92,7 @@ To see the full list of available options for the build script, run the followin
 npm run build -- --help
 ```
 
-### Modules
+### 📚 Modules
 
 To exclude a module, pass its path relative to the `src` folder (without the `.js` extension) to the `--exclude` option. When using the `--include` option, the default includes are dropped and a build is created with only those modules.
 
@@ -120,7 +120,7 @@ Some example modules that can be excluded or included are:
 
 *Note*: Excluding the full `selector` module will also exclude all jQuery selector extensions (such as `effects/animatedSelector` and `css/hiddenVisibleSelectors`).
 
-##### AMD name
+##### 🏷️ AMD Name
 
 You can set the module name for jQuery's AMD definition. By default, it is set to "jquery", which plays nicely with plugins and third-party libraries, but there may be cases where you'd like to change this. Pass it to the `--amd` parameter:
 
@@ -134,7 +134,7 @@ Or, to define anonymously, leave the name blank.
 npm run build -- --amd
 ```
 
-##### File name and directory
+##### 📂 File Name and Directory
 
 The default name for the built jQuery file is `jquery.js`; it is placed under the `dist/` directory. It's possible to change the file name using `--filename` and the directory using `--dir`. `--dir` is relative to the project root.
 
@@ -144,7 +144,7 @@ npm run build -- --slim --filename="jquery.slim.js" --dir="/tmp"
 
 This would create a slim version of jQuery and place it under `tmp/jquery.slim.js`.
 
-##### ECMAScript Module (ESM) mode
+##### 📜 ECMAScript Module (ESM) Mode
 
 By default, jQuery generates a regular script JavaScript file. You can also generate an ECMAScript module exporting `jQuery` as the default export using the `--esm` parameter:
 
@@ -152,7 +152,7 @@ By default, jQuery generates a regular script JavaScript file. You can also gene
 npm run build -- --filename=jquery.module.js --esm
 ```
 
-##### Factory mode
+##### 🏭 Factory Mode
 
 By default, jQuery depends on a global `window`. For environments that don't have one, you can generate a factory build that exposes a function accepting `window` as a parameter that you can provide externally (see [`README` of the published package](build/fixtures/README.md) for usage instructions). You can generate such a factory using the `--factory` parameter:
 
@@ -166,7 +166,7 @@ This option can be mixed with others like `--esm` or `--slim`:
 npm run build -- --filename=jquery.factory.slim.module.js --factory --esm --slim --dir="/dist-module"
 ```
 
-#### Custom Build Examples
+#### 🧪 Custom Build Examples
 
 Create a custom build using `npm run build`, listing the modules to be excluded. Excluding a top-level module also excludes its corresponding directory of modules.
 
@@ -202,7 +202,7 @@ npm run build -- --filename=jquery.slim.module.js --slim --esm
 
 *Non-official custom builds are not regularly tested. Use them at your own risk.*
 
-## Running the Unit Tests
+## 🧪 Running the Unit Tests
 
 Make sure you have the necessary dependencies:
 
@@ -223,11 +223,11 @@ Run the unit tests with a local server that supports PHP. Ensure that you run th
 - Linux: [Setting up LAMP](https://www.linux.com/training-tutorials/easy-lamp-server-installation/)
 - [Mongoose (most platforms)](https://code.google.com/p/mongoose/)
 
-## Essential Git
+## 🧰 Essential Git
 
 As the source code is handled by the Git version control system, it's useful to know some features used.
 
-### Cleaning
+### 🧹 Cleaning
 
 If you want to purge your working directory back to the status of upstream, the following commands can be used (remember everything you've worked on is gone after these):
 
@@ -236,7 +236,7 @@ git reset --hard upstream/main
 git clean -fdx
 ```
 
-### Rebasing
+### 🔄 Rebasing
 
 For feature/topic branches, you should always use the `--rebase` flag to `git pull`, or if you are usually handling many temporary "to be in a github pull request" branches, run the following to automate this:
 
@@ -246,10 +246,9 @@ git config branch.autosetuprebase local
 
 (see `man git-config` for more information)
 
-### Handling merge conflicts
+### ⚔️ Handling Merge Conflicts
 
-If you're getting merge conflicts when merging, instead of editing the conflicted files manually, you can use the feature
-`git mergetool`. Even though the default tool `xxdiff` looks awful/old, it's rather useful.
+If you're getting merge conflicts when merging, instead of editing the conflicted files manually, you can use the feature `git mergetool`. Even though the default tool `xxdiff` looks awful/old, it's rather useful.
 
 The following are some commands that can be used there:
 
@@ -262,9 +261,9 @@ The following are some commands that can be used there:
 - `Ctrl + S` - save
 - `Ctrl + Q` - quit
 
-## [QUnit](https://api.qunitjs.com) Reference
+## 📚 [QUnit](https://api.qunitjs.com) Reference
 
-### Test methods
+### 🧪 Test Methods
 
 ```js
 expect( numAssertions );
@@ -274,7 +273,7 @@ start();
 
 *Note*: QUnit's eventual addition of an argument to stop/start is ignored in this test suite so that start and stop can be passed as callbacks without worrying about their parameters.
 
-### Test assertions
+### 🧪 Test Assertions
 
 ```js
 ok( value, [message] );
@@ -287,11 +286,11 @@ notStrictEqual( actual, expected, [message] );
 throws( block, [expected], [message] );
 ```
 
-## Test Suite Convenience Methods Reference
+## 🧰 Test Suite Convenience Methods Reference
 
 See [test/data/testinit.js](https://github.com/jquery/jquery/blob/main/test/data/testinit.js).
 
-### Returns an array of elements with the given IDs
+### 🔍 Returns an Array of Elements with the Given IDs
 
 ```js
 q( ... );
@@ -305,7 +304,7 @@ q( "main", "foo", "bar" );
 => [ div#main, span#foo, input#bar ]
 ```
 
-### Asserts that a selection matches the given IDs
+### ✅ Asserts that a Selection Matches the Given IDs
 
 ```js
 t( testName, selector, [ "array", "of", "ids" ] );
@@ -317,7 +316,7 @@ Example:
 t("Check for something", "//[a]", ["foo", "bar"]);
 ```
 
-### Fires a native DOM event without going through jQuery
+### 🔥 Fires a Native DOM Event Without Going Through jQuery
 
 ```js
 fireNative( node, eventType );
@@ -329,7 +328,7 @@ Example:
 fireNative( jQuery( "#elem" )[ 0 ], "click" );
 ```
 
-### Add random number to url to stop caching
+### 🔗 Add Random Number to URL to Stop Caching
 
 ```js
 url( "some/url" );
@@ -348,12 +347,9 @@ url( "mock.php?foo=bar" );
 => "data/mock.php?foo=bar&10538358345554"
 ```
 
-### Run tests in an iframe
+### 🖼️ Run Tests in an Iframe
 
-Some tests may require a document other than the standard test fixture, and
-these can be run in a separate iframe. The actual test code and assertions
-remain in jQuery's main test files; only the minimal test fixture markup
-and setup code should be placed in the iframe file.
+Some tests may require a document other than the standard test fixture, and these can be run in a separate iframe. The actual test code and assertions remain in jQuery's main test files; only the minimal test fixture markup and setup code should be placed in the iframe file.
 
 ```js
 testIframe( testName, fileName,
@@ -364,18 +360,10 @@ testIframe( testName, fileName,
   } );
 ```
 
-This loads a page, constructing a url with fileName `"./data/" + fileName`.
-The iframed page determines when the callback occurs in the test by
-including the "/test/data/iframeTest.js" script and calling
-`startIframeTest( [ additional args ] )` when appropriate. Often this
-will be after either document ready or `window.onload` fires.
+This loads a page, constructing a URL with fileName "./data/" + fileName. The iframed page determines when the callback occurs in the test by including the "/test/data/iframeTest.js" script and calling `startIframeTest( [ additional args ] )` when appropriate. Often this will be after either document ready or `window.onload` fires.
 
-The `testCallback` receives the QUnit `assert` object created by `testIframe`
-for this test, followed by the global `jQuery`, `window`, and `document` from
-the iframe. If the iframe code passes any arguments to `startIframeTest`,
-they follow the `document` argument.
+The `testCallback` receives the QUnit `assert` object created by `testIframe` for this test, followed by the global `jQuery`, `window`, and `document` from the iframe. If the iframe code passes any arguments to `startIframeTest`, they follow the `document` argument.
 
-## Questions?
+## ❓ Questions?
 
-If you have any questions, please feel free to ask on the
-[Developing jQuery Core forum](https://forum.jquery.com/developing-jquery-core) or in #jquery on [libera](https://web.libera.chat/).
+If you have any questions, please feel free to ask on the [Developing jQuery Core forum](https://forum.jquery.com/developing-jquery-core) or in #jquery on [libera](https://web.libera.chat/).
